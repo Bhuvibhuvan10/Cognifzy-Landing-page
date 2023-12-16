@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.banner{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./asset/workspace.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav{
+    width:100%;
+    margin:auto;
+    padding:35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width:100px;
+    height:100px;
+    color: white !important;
+}
+.nav ul li{
+    list-style: none;
+    display:inline-flex;
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+   
+}
+.nav ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.nav ul li::after{
+    content: '';
+    height: 3px;
+    width:0;
+    background:blue;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.nav ul li:hover::after{
+    width:100%;
+}
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer;
+    display: none;
+}
+#check{
+    display:none;
+}
+
+@media (max-width:952px){
+    label.logo{
+        font-size:30px;
+        padding-left:50px;
+    }
+    .nav ul li a{
+        font-size: 16px;
+        position: sticky;
+    }
+}
+@media (max-width:858px){
+    
+    .checkbtn{
+        display: block;
+        padding-right: 5px;
+    }
+
+.nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(29, 33, 25, 0.75);
+        top:95px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;;
+    }
+.nav ul li {
+        display: block;
+        margin:30px 0;
+        line-height: 60px;
+    }
+.nav ul li a{
+        font-size: 20px;
+    }
+a:hover{
+        background-color:none;
+        color:blue;
+        border:none;
+        width:fit-content;
+    }
+#check:checked ~ ul{
+        left:0;
+    }
+#content{
+        display:none;
+    }
+}       
+#content{
+    width:100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#fff;
+}
+#content h1{
+    font-size: 70px;
+    margin-top:80px;
+}
+#content h1 span{
+    color:blue;
+}
+#content p{
+    margin:20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+
+
+button{
+    width:200px;
+    padding:15px 0;
+    text-align:center;
+    margin:20px 10px;
+    border-radius:25px;
+    font-weight: bold;
+    border:2px solid blue;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+    position: relative;
+    overflow: hidden;
+}
+button span{
+    background-color: blue;
+    height: 100%;
+    width:0;
+    border-radius:25px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width:100%;
+}
+button:hover{
+    border:none;
+}
+
+#home{
+    background:linear-gradient(rgba(0.75,0,0,0),rgba(0,0,0,0.75),rgb(42, 42, 71));
+
+}
+
+#about{
+    width:100%;
+    height:200vh;
+    background:linear-gradient(to right,#cc41ff,#4144ff);
+    background-size: cover;
+    background-position: center;
+
+}
+#about h1{
+   align-items: center;
+   text-align: center;
+   justify-content: center; 
+   margin:100px 0;
+   font-weight: bolder;
+   font-family: sans-serif;
+   color: #fff;
+   margin-top: 30px;
+   padding: 40px;
+}
+#about h1 span{
+    color:blue;
+}
+#about p{
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    color:#fff;
+}
+#about .row{
+    border:none;
+}
+#about #clogo{
+    width:200px;
+    height:200px;
+    margin-left:40%;
+    margin-top: 0;
+    margin-bottom: 5px;
+
+}
+#about #mlogo{
+    width: 200px;
+    height: 200px;
+    margin-top:50%;
+    margin-left: 40%;
+}
+#about ul{
+    margin: 100px auto;
+}
+#about li{
+    font-size: large;
+    font-weight: bold;
+    line-height: 50px;
+    color:white;
+}
+@media (max-width:952px){
+    #about #clogo{
+        width:100px;
+        height:100px;
+       margin: 50px auto;
+    
+    }
+    #about #mlogo{
+        width: 100px;
+        height: 100px;
+        margin: 40px auto;
+    }
+}
+
+
+
+
+#courses{
+    background:linear-gradient(to right,#cc41ff,#4144ff);
+    background-size: cover;
+    background-position: center;
+}
+#courses h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 30px;
+
+}
+@media (max-width:952px){
+    #course{
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+
+#internship{
+    background:linear-gradient(to right,#cc41ff,#4144ff);
+    background-size: cover;
+    background-position: center;
+    color:white;
+    text-align: center;
+    width: 100%;
+    height: 200vh;
+}
+#internship h1{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#internship span{
+    color: blue;
+}
+
+
+footer{
+    width:100%;
+    bottom: 0;
+    background-image:linear-gradient(rgba(41, 40, 40, 0.75),rgba(0,0,0,0.75));
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+footer .row{
+    width:85%;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .col{
+    margin-top: 10px;
+    flex-basis: 25%;
+    padding: 10px;
+
+}
+footer .logo img{
+    width: 80px;
+    margin-bottom: 10px;
+
+}
+footer .col h3{
+    margin-bottom:30px ;
+    width: fit-content;
+    position: relative;
+    line-height: 8px;
+}
+.email-id{
+    width:fit-content;
+    border-bottom:1px solid #ccc;
+    margin:20px 0;
+}
+footer ul{
+    list-style: none;
+    letter-spacing: 3px;
+}
+
+footer ul li{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+footer .col form{
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+footer input{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    color:white;
+}
+footer col .socialmedia{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+

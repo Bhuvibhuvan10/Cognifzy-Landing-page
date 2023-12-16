@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./register.css">
+    <title>Register</title>
+</head>
+<body>
+    
+    <div class="container"id="container">   
+        <h1>Register Form</h1>            
+        <div class="form-container register-container">
+            <form action="#">
+                <label for="Name">Name</label>
+                <input type="text">
+                <label for="CompanyName">Company Name</label>
+                <input type="text">
+                <label for="traningNeed">Traning need</label>
+                <input type="text">
+                <label for="Email">Email ID</label>
+                <input type="text">
+                <label for="Phone">Phone</label>
+                <input type="text">
+                <label for="Query">Query</label>
+                <input type="text">
+                <div>
+                <button id="submit">Submit</button>
+                <a href="loginform.html"><button id="back">Back</button></a>
+                </div>
+            </form>
+            </div>
+            </div>
+            <script>
+                const submit=document.getElementById('submit');
+                const container=document.getElementById('container');
+                const back=document.getElementById('back')
+                submit.addEventListener('click',()=>{
+                    container.classList.add(alert('Successfully Submitted'))
+                });
+            </script>
+</body>
+</html>
